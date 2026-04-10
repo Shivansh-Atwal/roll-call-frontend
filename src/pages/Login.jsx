@@ -22,7 +22,7 @@ const Login = ({ onLogin }) => {
     try {
       // Test backend connection first
       try {
-        const testResponse = await fetch(`${API_BASE_URL}/test-cors`, {
+        const testResponse = await fetch(`${API_BASE_URL}/api/test-cors`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
