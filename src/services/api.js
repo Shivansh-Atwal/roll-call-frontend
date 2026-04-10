@@ -254,8 +254,8 @@ export const teamsAPI = {
 
 // Health check API
 export const healthAPI = {
-  check: () => apiCall('/api/health'),
-  testCors: () => apiCall('/api/test-cors'),
+  check: () => apiCall('/health'),
+  testCors: () => apiCall('/test-cors'),
 };
 
 export default {
