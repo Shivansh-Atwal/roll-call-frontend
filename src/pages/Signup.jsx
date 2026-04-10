@@ -31,31 +31,6 @@ const Signup = ({ onSignup }) => {
         return;
       }
 
-      
-      try {
-        const testResponse = await fetch(`${API_BASE_URL}/api/test-cors`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-        
-        if (!testResponse.ok) {
-          console.error('Backend connection test failed:', testResponse.status);
-          toast.error('Cannot connect to server. Please check if the backend is running.');
-          setLoading(false);
-          return;
-        }
-        
-        console.log('Backend connection test successful');
-      } catch (testError) {
-        console.error('Backend connection test error:', testError);
-        toast.error('Cannot connect to server. Please check if the backend is running.');
-        setLoading(false);
-        return;
-      }
-
-      
       const userData = {
         name: data.name.trim(),
         email: data.email.trim().toLowerCase(),
